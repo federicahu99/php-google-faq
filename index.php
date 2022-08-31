@@ -1,37 +1,36 @@
 <?php 
 
 $faq= [
-    'question1' => [
-        'answer1' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
+    'section' => [
+        'question' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
+                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
+                     al tuo caso."],
+        'answer' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
                      potremmo non essere nella posizione giusta per prendere decisioni in merito 
                      al tuo caso.",
                      "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
+                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
+                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
+                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
+                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
                     all'Autorità garante per la protezione dei dati personali nel tuo paese."],
+    'section'=> [
+        'question' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
+                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
+                     al tuo caso."],
         'answer2' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
                      potremmo non essere nella posizione giusta per prendere decisioni in merito 
                      al tuo caso.",
                      "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
-                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
-                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese."],
-    'question2'=> [
-        'answer3' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso.",
-                     "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
-                     "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese."],
-        'answer4' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso.",
-                     "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
                     all'Autorità garante per la protezione dei dati personali nel tuo paese."],
     ]
     ]
-]
+    ];
+
+echo '<pre>';
+var_dump($faq);
+echo '</pre>';
+
 ?>
 
 <!DOCTYPE html>
@@ -44,13 +43,15 @@ $faq= [
 </head>
 <body>
     <h1>Domande frequenti:</h1>
-    <?php foreach($faq as $question) { ?>
-        <h3> <?php echo $question; ?></h3>
-        <?php foreach($question as $answer) { ?>
+    <ul>
+        <?php for( $i = 0; $i < count($faq) - 1 ; $i++ ) : ?>
+        <li>
+            <?php echo $faq['question']; ?>
             <div>
-            <?php echo $answer; ?>
+                <?php echo $faq['answer']; ?>
             </div>
-        <?php }; ?>
-    <?php }; ?>
+        </li>
+        <?php endfor; ?>
+    </ul>
 </body>
 </html>

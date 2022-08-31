@@ -18,7 +18,7 @@ $faq= [
     ],
     'section3'=> [
         'question' =>  "Perché il mio account è associato a un paese?",
-        'answer' => '<p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
+        'answer' => '<div id="special"><p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
         <ol>
         <li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:</li>
         <ul>
@@ -26,8 +26,8 @@ $faq= [
         <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
         </ul>
         <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>
-        <p>Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.</p>
-        <h3>Stabilire il paese associato al tuo account</h3>
+        <p>Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.</p></div>
+        <h4>Stabilire il paese associato al tuo account</h4>
         <p>Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell\'ultimo anno.</p>
         <p>I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l\'associazione del paese.</p>
         <p>Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. <a href="#">Contattaci</a> se ritieni che il paese associato al tuo account sia sbagliato.</p>'
@@ -54,12 +54,21 @@ $faq= [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>FAQ</title>
 </head>
 <body>
-    <h1>Domande frequenti:</h1>
+    <header class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <i class="fa-solid fa-bars"></i>
+            <h3>Domande frequenti:</h3>
+        </div>
+    </header>
+    
 
-    <ul>
+    <ul class="container">
         <?php foreach($faq as $section) : ?>
         <li>
             <h2> <?php echo $section['question']; ?></h2>
@@ -69,6 +78,25 @@ $faq= [
             <?php endforeach; ?>
         </li>
     </ul>
+
+    <footer class="d-flex align-items-center justify-content-between">
+        <div>
+            <ul  class="d-flex">
+                <li>Google</li>
+                <li>Google</li>
+                <li>Google</li>
+                <li>Google</li>
+            </ul>
+        </div>
+        <div class="d-flex">
+            <select name="" id="">
+            <option value="">Google</option>
+            <option value="">Google</option>
+            <option value="">Google</option>
+            </select>
+            
+        </div>
+    </footer>
 
 </body>
 </html>

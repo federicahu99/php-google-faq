@@ -2,30 +2,20 @@
 
 $faq= [
     'section' => [
-        'question' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso."],
-        'answer' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso.",
-                     "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
-                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese.",
-                    "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese."],
+        'question' => "Lorem ipsum dolor sit, sapiente deserunt et, enim earum nesciunt?",
+        'answer' => "<p>Lorem ipsum dolor sit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, laudantium tempore hic error aut veritatis consectetur incidunt, sapiente deserunt et, enim earum nesciunt! </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, laudantium tempore hic error aut veritatis consectetur.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, enim earum nesciunt!</p>,
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit, sapiente deserunt et, enim earum nesciunt!     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perferendis aut aliquam suscipit pariatur, nisi veniam at necessitatibus, eveniet modi est reprehenderit ipsum aperiam, architecto minus enim. Maiores, incidunt est.</p>",
+    ],
     'section'=> [
-        'question' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso."],
-        'answer2' => [ "Queste valutazioni sono complesse e, in quanto organizzazione privata, 
-                     potremmo non essere nella posizione giusta per prendere decisioni in merito 
-                     al tuo caso.",
-                     "Se non sei d'accordo con la nostra valutazione, puoi rivolgerti 
-                    all'Autorità garante per la protezione dei dati personali nel tuo paese."],
+        'question' =>  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo. Asperiores, laudantium tempore hic error aut veritatis consectetur incidunt, sapiente deserunt et, enim earum nesciunt?",
+        'answer' => "<p>Lorem ipsum dolor sit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, laudantium tempore hic error aut veritatis consectetur incidunt, sapiente deserunt et, enim earum nesciunt! </p>
+        <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt perferendis aut aliquam suscipit pariatur, nisi veniam at necessitatibus, eveniet modi est reprehenderit ipsum aperiam, architecto minus enim. Maiores, incidunt est.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, enim earum nesciunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo, excepturi molestias est dignissimos doloremque! Asperiores, enim earum nesciunt!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit, sapiente deserunt et, enim earum nesciunt!</p>",
     ]
-    ]
-    ];
+];
 
 echo '<pre>';
 var_dump($faq);
@@ -43,15 +33,17 @@ echo '</pre>';
 </head>
 <body>
     <h1>Domande frequenti:</h1>
+
     <ul>
-        <?php for( $i = 0; $i < count($faq) - 1 ; $i++ ) : ?>
+        <?php foreach($faq as $section) : ?>
         <li>
-            <?php echo $faq['question']; ?>
-            <div>
-                <?php echo $faq['answer']; ?>
-            </div>
+            <h3> <?php echo $section['question']; ?></h3>
+                <div>
+                    <?php echo $section['answer']; ?>
+                </div>
+            <?php endforeach; ?>
         </li>
-        <?php endfor; ?>
     </ul>
+
 </body>
 </html>
